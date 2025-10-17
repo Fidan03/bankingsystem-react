@@ -1,11 +1,22 @@
-.sliderContainer {
+.slider {
+  width: 20%;
+  height: 20%;
+  position: relative;
+  display: inline-block;
+}
 
-    .imgContainer {
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
 
-        img {
-            width: 491px;
-            height: 371px;
-            object-fit: cover;
-        }
-    }
+.swiper-pagination-bullet {
+  background: #ccc; 
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #007bff; 
 }

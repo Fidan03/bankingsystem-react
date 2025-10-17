@@ -1,38 +1,35 @@
-import Slider from "react-slick";
-import type { Settings } from "react-slick";
-import group from '../assets/Group 254.png'
-import styles from './LoginSlider.module.scss'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Mousewheel, Pagination } from 'swiper/modules'; // ✅ Add Pagination
+import 'swiper/css';
+import 'swiper/css/pagination'; // ✅ Import pagination styles
+import styles from './LoginSlider.module.scss';
+import group from '../assets/Group 254.png';
 
-function LoginSLider() {
-
-const settings: Settings = {
-  dots: true,
-  lazyLoad: "ondemand", 
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  initialSlide: 0,
-};
-
+export default function LoginSlider() {
   return (
-    <div className={styles.sliderContainer}>
-      <Slider {...settings}>
-        <div className={styles.imgContainer}>
-          <img src={group} alt="group"/>
-        </div>
-        <div>
-          <img src={group} alt="group"/>
-        </div>
-        <div>
-          <img src={group} alt="group"/>
-        </div>
-        <div>
-          <img src={group} alt="group"/>
-        </div>
-      </Slider>
-    </div>
+    <Swiper
+      modules={[Mousewheel, Pagination]} 
+      mousewheel={{ forceToAxis: true }}
+      pagination={{ clickable: true }} 
+      spaceBetween={50}
+      slidesPerView={1}
+      speed={600}
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)}
+      className={styles.slider}
+    >
+      <SwiperSlide>
+        <img src={group} alt="group" className={styles.image} />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={group} alt="group" className={styles.image} />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={group} alt="group" className={styles.image} />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={group} alt="group" className={styles.image} />
+      </SwiperSlide>
+    </Swiper>
   );
 }
-
-export default LoginSLider;
