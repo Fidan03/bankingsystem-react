@@ -1,9 +1,64 @@
-div {
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    width: 618px;
 
-    div {
+    .nav {
+        display: flex;
+        justify-content: space-between;
+
         img {
             width: 167.98px;
             height: 40px;
         }
+
+        div {
+            display: flex;
+            gap: 5px;
+
+            p {
+                font-size: 16px;
+                color: #94A3B8;
+                cursor: pointer;
+            }
+        }
     }
+
+    .login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            font-size: 32px;
+            font-weight: 800;
+            color: #334155;
+        }
+
+        div {
+            display: flex;
+            gap: 30px;
+
+            p {
+                font-size: 16px;
+                color: #5D6A83;
+                cursor: pointer;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            font-size: 16px;
+            color: #475569;
+        }
+    }
+    
+
 }

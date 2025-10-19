@@ -1,15 +1,12 @@
 import Login from '../components/Login'
-import LoginSLider from '../components/LoginSlider'
 import Welcome from '../components/Welcome'
-
-// import styles from './register.module.scss'
+import styles from './register.module.scss'
 
 const Register = () => {
   return (
-    <div>
+    <div className={styles.register}>
       <Welcome/>
       <Login/>
-      <LoginSLider/>
     </div>
   )
 }

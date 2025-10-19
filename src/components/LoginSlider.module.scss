@@ -5,6 +5,14 @@
   display: inline-block;
 }
 
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+}
+
 .image {
   width: 100%;
   height: auto;
@@ -19,4 +27,12 @@
 
 .swiper-pagination-bullet-active {
   background: #007bff; 
+}
+
+.title {
+
+}
+
+.body {
+
 }

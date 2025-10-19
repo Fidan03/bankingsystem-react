@@ -3,8 +3,9 @@ import styles from './Login.module.scss'
 
 const Login = () => {
   return (
-    <div>
-      <div>
+    <div className={styles.loginContainer}>
+
+      <div className={styles.nav}>
         <img src={logo} alt="Azərpoçt logo" />
         <div>
           <p>AZ</p>
@@ -12,11 +13,21 @@ const Login = () => {
           <p>RU</p>
         </div>
       </div>
-      <p>Şəxsi kabinetə giriş</p>
-      <div>
-        giriş
+
+      <div className={styles.login}>
+        <p>Şəxsi kabinetə giriş</p>
+        <div>
+          <p>OTP giriş</p>
+          <p>ASAN imza</p>
+          <p>SIMA</p>
+        </div>
+
+        <div>
+          options
+        </div>
       </div>
-      <div>
+
+      <div className={styles.footer}>
         <p>Gizlilik Siyasəti</p>
         <p>Azərpoçt 2022</p>
       </div>
