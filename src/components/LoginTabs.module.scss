@@ -1,0 +1,11 @@
+:global(.ant-tabs-tab-btn) {
+  font-size: 18px; 
+  font-weight: 600;
+  color: #333; 
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+:global(.ant-tabs-tab-btn:hover) {
+  color: #1677ff; 
+}
