@@ -1,7 +1,9 @@
 import logo from '../assets/Azərpoçt AZ horizontal 1.png'
 import styles from './Login.module.scss'
+import LoginTabs from './LoginTabs'
 
 const Login = () => {
+
   return (
     <div className={styles.loginContainer}>
 
@@ -17,13 +19,7 @@ const Login = () => {
       <div className={styles.login}>
         <p>Şəxsi kabinetə giriş</p>
         <div>
-          <p>OTP giriş</p>
-          <p>ASAN imza</p>
-          <p>SIMA</p>
-        </div>
-
-        <div>
-          options
+          <LoginTabs/>
         </div>
       </div>
 
