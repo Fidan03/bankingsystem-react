@@ -1,38 +1,12 @@
-.slider {
-  width: 20%;
-  height: 20%;
-  position: relative;
-  display: inline-block;
-}
 
-.slide {
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-self: center;
-  align-self: center;
 }
-
-.image {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-.swiper-pagination-bullet {
-  background: #ccc; 
-  opacity: 1;
-}
-
-.swiper-pagination-bullet-active {
-  background: #007bff; 
-}
-
-.title {
-
-}
-
-.body {
-
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
 }

@@ -2,26 +2,26 @@ import { FaRegEyeSlash } from "react-icons/fa";
 import styles from './OPTLogin.module.scss';
 import { Input, Space } from 'antd';
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
-import { Radio } from 'antd';
+import { Radio, Button, Flex } from 'antd';
 
 const OPTLogin = () => {
   return (
     <div className={styles.OPTContainer}>
       <div className={styles.mail}>
-        <Input placeholder="Email" />
-        <Space direction="vertical" style={{ width: '100%' }}>
-          <Input.Password placeholder="Input password" />
+        <Input placeholder="Email" className={styles.input}/>
+        <Space direction="vertical" >
+          <Input.Password placeholder="Input password" className={styles.input}/>
         </Space>
       </div>
 
       <div className={styles.saveAndPassword}>
-        <div className={styles.save}>
-          <Radio>Yadda saxla<Radio/>
-        </div>
-        <p>Şifrəni unutmusunuz?</p>
+        <Radio>Yadda saxla</Radio>
+        <p className={styles.password}>Şifrəni unutmusunuz?</p>
       </div>
 
-      <button className={styles.login}>Giriş</button>
+      <Flex gap="large" wrap>
+        <Button type="primary" className={styles.button}>Giriş</Button>
+      </Flex>
     </div>
   );
 }
