@@ -11,17 +11,17 @@ const onChange = key => {
 const items = [
     {
         key: '1',
-        label: 'Tab 1',
+        label: 'OTP',
         children: <OPTLogin/>,
     },
     {
         key: '2',
-        label: 'Tab 2',
+        label: 'Asan imza',
         children: 'Content of Tab Pane 2',
     },
     {
         key: '3',
-        label: 'Tab 3',
+        label: 'SIMA',
         children: 'Content of Tab Pane 3',
     },
 ];
