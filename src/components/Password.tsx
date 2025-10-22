@@ -6,6 +6,7 @@ import AuthNav from './AuthNav';
 import AuthFooter from './AuthFooter';
 
 
+
 const PasswordRecoveryPage = () => {
   return (
     <div className={styles.PasswordContainer}>
@@ -24,6 +25,7 @@ const PasswordRecoveryPage = () => {
           <Flex gap="small" wrap>
             <Button type="primary" className={styles.button}>Dəvam et</Button>
           </Flex>
+        
       </div>
 
       <div>
