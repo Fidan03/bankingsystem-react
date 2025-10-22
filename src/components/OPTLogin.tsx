@@ -3,8 +3,11 @@ import styles from './OPTLogin.module.scss';
 import { Input, Space } from 'antd';
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
 import { Radio, Button, Flex } from 'antd';
+import { useNavigate } from "react-router-dom";
 
 const OPTLogin = () => {
+  let navigate = useNavigate();
+
   return (
     <div className={styles.OPTContainer}>
       <div className={styles.mail}>
@@ -16,7 +19,7 @@ const OPTLogin = () => {
 
       <div className={styles.saveAndPassword}>
         <Radio>Yadda saxla</Radio>
-        <p className={styles.password}>Şifrəni unutmusunuz?</p>
+        <p className={styles.password} onClick={() => navigate("/password-recovery")}>Şifrəni unutmusunuz?</p>
       </div>
 
       <Flex gap="large" wrap>

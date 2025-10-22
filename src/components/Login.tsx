@@ -1,20 +1,16 @@
-import logo from '../assets/Azərpoçt AZ horizontal 1.png'
 import styles from './Login.module.scss'
 import LoginTabs from './LoginTabs'
-import LoginSlider from './LoginSlider'
+// import LoginSlider from './LoginSlider'
+import AuthNav from './AuthNav'
+import AuthFooter from './AuthFooter'
 
 const Login = () => {
 
   return (
     <div className={styles.loginContainer}>
 
-      <div className={styles.nav}>
-        <img src={logo} alt="Azərpoçt logo" />
-        <div>
-          <p>AZ</p>
-          <p>EN</p>
-          <p>RU</p>
-        </div>
+      <div>
+        <AuthNav/>
       </div>
 
       <div className={styles.login}>
@@ -24,12 +20,11 @@ const Login = () => {
         </div>
       </div>
 
-      <div className={styles.footer}>
-        <p>Gizlilik Siyasəti</p>
-        <p>Azərpoçt 2022</p>
+      <div>
+        <AuthFooter/>
       </div>
 
-      <LoginSlider/>
+      {/* <LoginSlider/> */}
     </div>
   )
 }

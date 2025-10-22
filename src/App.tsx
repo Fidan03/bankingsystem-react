@@ -8,7 +8,7 @@ function App() {
     <Router>
       <Routes>
         <Route path='/' element={<Register/>}/>  
-        <Route path='password-recovery' element={<PasswordRecoveryPage/>}/> 
+        <Route path='/password-recovery' element={<PasswordRecoveryPage/>}/> 
       </Routes>
     </Router>
   )

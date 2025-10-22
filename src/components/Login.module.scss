@@ -5,26 +5,6 @@
     padding: 30px;
     width: 618px;
 
-    .nav {
-        display: flex;
-        justify-content: space-between;
-
-        img {
-            width: 167.98px;
-            height: 40px;
-        }
-
-        div {
-            display: flex;
-            gap: 5px;
-
-            p {
-                font-size: 16px;
-                color: #94A3B8;
-                cursor: pointer;
-            }
-        }
-    }
 
     .login {
         display: flex;
@@ -49,16 +29,5 @@
             }
         }
     }
-
-    .footer {
-        display: flex;
-        justify-content: space-between;
-
-        p {
-            font-size: 16px;
-            color: #475569;
-        }
-    }
-    
 
 }
