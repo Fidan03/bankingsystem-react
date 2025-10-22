@@ -1,0 +1,26 @@
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        img {
+            width: 167.98px;
+            height: 40px;
+        }
+
+        div {
+            display: flex;
+            gap: 5px;
+
+            p {
+                font-size: 16px;
+                color: #94A3B8;
+                cursor: pointer;
+            }
+
+            p:hover {
+                color: black;
+            }
+        }
+    }
