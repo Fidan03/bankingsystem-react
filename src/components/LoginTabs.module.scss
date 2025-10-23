@@ -9,3 +9,8 @@
 :global(.ant-tabs-tab-btn:hover) {
   color: #1677ff; 
 }
+
+:global(.ant-tabs-nav-wrap) {
+  display: flex;
+  justify-content: center;
+}
