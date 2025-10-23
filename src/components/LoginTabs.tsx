@@ -1,4 +1,3 @@
-import React from 'react';
 import { Tabs } from 'antd';
 import styles from './LoginTabs.module.scss'
 import OPTLogin from './OPTLogin';

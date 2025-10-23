@@ -1,29 +1,14 @@
 .smth {
   background-color: #003F6D;
-  width: 798px;
-  height: 976px;
+  height: 100vh;
   border-radius: 16px;
   margin: 24px;
-  margin-right: 0;
-  position: relative;
 
   div {
-    width: 751px;
-    height: 943px;
-    position: relative;
 
     img {
-      width: 100%;
       height: 100%;
-      object-fit: cover;
     }
 
-    div {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 5;
-    }
   }
 }
