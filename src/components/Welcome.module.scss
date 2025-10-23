@@ -4,14 +4,23 @@
   width: 100vh;
   border-radius: 16px;
   margin: 24px;
+  position: relative;
+  padding: 24px;
 
   div {
+
 
     .pattern {
       height: 100vh;
       width: 100%;
       border-radius: 16px;
     }
+
+    // .slider{
+    //   display: inline;
+    //   position: relative;
+    //   bottom: 100vh;
+    // }
 
   }
 }

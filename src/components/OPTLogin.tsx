@@ -1,8 +1,11 @@
 import { Form, Input, Radio, Button, Flex } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import styles from './OPTLogin.module.scss';
+import { useState } from 'react';
 
 const OPTLogin = () => {
+  const [value, setValue] = useState("");
+
   const navigate = useNavigate();
 
   const onFinish = (values: any) => {
@@ -13,6 +16,17 @@ const OPTLogin = () => {
     console.log('Failed:', errorInfo);
   };
 
+  const handleChange = (e) => {
+    setValue(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(value);
+    
+  }
+
+
   return (
     <div className={styles.OPTContainer}>
       <Form
@@ -20,20 +34,21 @@ const OPTLogin = () => {
         layout="vertical"
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
-        className={styles.form}
+        className={styles.form} 
+        onChange={handleChange}
       >
         <Form.Item
           name="email"
           rules={[{ required: true, message: 'Zəhmət olmasa email daxil edin!' }]}
         >
-          <Input placeholder="Email" className={styles.input} />
+          <Input placeholder="Email" className={styles.input} value={value}/>
         </Form.Item>
 
         <Form.Item
           name="password"
           rules={[{ required: true, message: 'Zəhmət olmasa şifrə daxil edin!' }]}
         >
-          <Input.Password placeholder="Şifrə" className={styles.input} />
+          <Input.Password placeholder="Şifrə" className={styles.input} value={value}/>
         </Form.Item>
 
         <div className={styles.saveAndPassword}>
