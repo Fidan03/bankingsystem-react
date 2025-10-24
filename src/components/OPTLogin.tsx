@@ -69,6 +69,7 @@ const OPTLogin = () => {
               type="primary"
               htmlType="submit"
               className={styles.button}
+              disabled={!value}
             >
               Giriş
             </Button>
