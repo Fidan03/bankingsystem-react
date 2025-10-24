@@ -1,22 +1,18 @@
 .OPTContainer {
     display: flex;
     flex-direction: column;
-    
 
-    .mail {
-        display: flex;
-        flex-direction: column;
-
-        input {
-            width: 100%;
+    .form {
+        .input {
             height: 56px;
         }
     }
-
     .saveAndPassword {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-top: 50px;
+        margin-bottom: 20px;
 
         .password {
             color: #194BFB;
@@ -28,6 +24,7 @@
         width: 424px;
         height: 56px;
     }
+
 
 }
 
