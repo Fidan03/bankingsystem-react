@@ -1,26 +1,32 @@
 .smth {
   background-color: #003F6D;
-  height: 100vh;
+  height: 93vh;
   width: 100vh;
   border-radius: 16px;
   margin: 24px;
   position: relative;
-  padding: 24px;
 
   div {
 
 
     .pattern {
-      height: 100vh;
+      height: 93vh;
       width: 100%;
       border-radius: 16px;
     }
 
-    // .slider{
-    //   display: inline;
-    //   position: relative;
-    //   bottom: 100vh;
-    // }
+    .slider {
+      position: absolute;
+      display: inline;
+      left: 100px;
+      top: 100px;
+
+      // .sliderImg {
+      //   position: relative;
+
+      // }
+
+    }
 
   }
 }
