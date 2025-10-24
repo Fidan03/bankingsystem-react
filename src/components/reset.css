@@ -1,4 +1,9 @@
-.ant-btn-primary {
-    background-color: #003F6D;
+.ant-btn-primary, .ant-btn-primary:hover {
+    background-color: #003F6D !important;
 
+}
+
+.ant-btn-primary:disabled {
+    background-color: #668CA7 !important;
+    color: white;
 }
