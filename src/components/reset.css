@@ -7,3 +7,11 @@
     background-color: #668CA7 !important;
     color: white;
 }
+
+.ant-input-outlined {
+    width: 56px;
+    height: 56px;
+    color: #334155;
+    font-weight: 800;
+    font-size: 24px;
+}
