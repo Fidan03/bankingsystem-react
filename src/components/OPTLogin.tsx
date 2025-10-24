@@ -8,7 +8,7 @@ const OPTLogin = () => {
 
   const navigate = useNavigate();
 
-  const onFinish = (values: any) => {
+  const onFinish = (values: object) => {
     console.log('Success:', values);
   };
 
@@ -16,7 +16,7 @@ const OPTLogin = () => {
     console.log('Failed:', errorInfo);
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     setValue(e.target.value);
   };
 
