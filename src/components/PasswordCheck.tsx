@@ -1,52 +1,58 @@
-import React from 'react'
-import styles from './PasswordCheck.module.scss'
+import React, { useState } from 'react';
+import styles from './PasswordCheck.module.scss';
 import { Flex, Input, Typography, Button } from 'antd';
 const { Title } = Typography;
-import AuthNav from './AuthNav'
-import AuthFooter from './AuthFooter'
+import AuthNav from './AuthNav';
+import AuthFooter from './AuthFooter';
 import { useNavigate } from 'react-router-dom';
 
 const PasswordCheck = () => {
-
-      const onChange = text => {
-    console.log('onChange:', text);
-  };
-  const onInput = value => {
-    console.log('onInput:', value);
-  };
-  const sharedProps = {
-    onChange,
-    onInput,
-  };
-
+  const [value, setValue] = useState('');
   const navigate = useNavigate();
+
+  const handleChange = (text) => {
+    console.log('OTP value:', text);
+    setValue(text);
+  };
 
   return (
     <div className={styles.passwordTimerContainer}>
-        
-        <div>
-            <AuthNav/>
-        </div>
+      <AuthNav />
 
-        <div className={styles.passwordTimer}>
-            <p className={styles.title}>Yoxlama kodunu təsdiqləyin</p>
-            <p className={styles.body}>Yoxlama kodu SMS vasitəsilə qey olunan telefonunuza göndərildi: +994 *** ** 38</p>
-            <Flex gap="middle" align="flex-start" vertical>
-                <Input.OTP length={4} {...sharedProps} className={styles.numberField}/>
-            </Flex>
-            <p className={styles.timerBody}>Kodu yeniden göndər: <span>1:56</span></p>
+      <div className={styles.passwordTimer}>
+        <p className={styles.title}>Yoxlama kodunu təsdiqləyin</p>
+        <p className={styles.body}>
+          Yoxlama kodu SMS vasitəsilə qeyd olunan telefonunuza göndərildi: +994 *** ** 38
+        </p>
 
-            <Flex gap="small" wrap>
-                <Button type="primary" className={styles.btn} onClick={() => navigate('/homepage')}>Giriş</Button>
-            </Flex>
-        </div>
+        <Flex gap="middle" align="flex-start" vertical>
+          <Input.OTP
+            length={4}
+            onChange={handleChange}
+            value={value}
+            className={styles.numberField}
+          />
+        </Flex>
 
-        <div>
-            <AuthFooter/>
-        </div>
+        <p className={styles.timerBody}>
+          Kodu yenidən göndər: <span>1:56</span>
+        </p>
 
+        <Flex gap="small" wrap>
+          <Button
+            type="primary"
+            className={styles.btn}
+            onClick={() => navigate('/homepage')}
+            disabled={value.length < 4}
+          >
+            Giriş
+          </Button>
+        </Flex>
+      </div>
+
+      <AuthFooter />
     </div>
-  )
-}
+  );
+};
 
-export default PasswordCheck
+export default PasswordCheck;
