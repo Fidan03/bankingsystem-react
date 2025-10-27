@@ -4,6 +4,7 @@ import { Flex, Input, Typography, Button } from 'antd';
 const { Title } = Typography;
 import AuthNav from './AuthNav'
 import AuthFooter from './AuthFooter'
+import { useNavigate } from 'react-router-dom';
 
 const PasswordCheck = () => {
 
@@ -17,6 +18,8 @@ const PasswordCheck = () => {
     onChange,
     onInput,
   };
+
+  const navigate = useNavigate();
 
   return (
     <div className={styles.passwordTimerContainer}>
@@ -34,7 +37,7 @@ const PasswordCheck = () => {
             <p className={styles.timerBody}>Kodu yeniden göndər: <span>1:56</span></p>
 
             <Flex gap="small" wrap>
-                <Button type="primary">Primary Button</Button>
+                <Button type="primary" className={styles.btn} onClick={() => navigate('/homepage')}>Giriş</Button>
             </Flex>
         </div>
 
