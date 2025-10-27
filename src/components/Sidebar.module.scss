@@ -1,0 +1,26 @@
+.sidebarContainer {
+    background-color: #003F6D;
+    width: 250px;
+    height: 100%;
+    border-radius: 16px;
+    margin: 12px;
+    
+    .menuList {
+        .list {
+            .eachItem {
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                gap: 20px;
+
+                .menuImg {
+                    text-align: center;
+                }
+
+                .menuTitle {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
