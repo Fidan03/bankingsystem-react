@@ -30,7 +30,8 @@ const PasswordCheck = () => {
             length={4}
             onChange={handleChange}
             value={value}
-            className={styles.numberField}
+            className={`${styles.numberField} otp-input`}
+
           />
         </Flex>
 

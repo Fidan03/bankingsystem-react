@@ -9,9 +9,14 @@
 }
 
 .ant-input-outlined {
-    width: 56px;
-    height: 56px;
+    /* width: 56px; */
+    /* height: 56px; */
     color: #334155;
     font-weight: 800;
     font-size: 24px;
+}
+
+.ant-otp-input{
+    width: 56px;
+    height: 56px;
 }
