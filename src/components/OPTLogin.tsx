@@ -70,6 +70,7 @@ const OPTLogin = () => {
               htmlType="submit"
               className={styles.button}
               disabled={!value}
+              onClick={() => navigate('/otp-checking')}
             >
               Giriş
             </Button>

@@ -7,7 +7,7 @@ import AuthFooter from './AuthFooter';
 
 
 
-const PasswordRecoveryPage = () => {
+const Password = () => {
   return (
     <div className={styles.PasswordContainer}>
 
@@ -36,4 +36,4 @@ const PasswordRecoveryPage = () => {
   )
 }
 
-export default PasswordRecoveryPage
+export default Password
