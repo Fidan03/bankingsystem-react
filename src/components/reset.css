@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .ant-btn-primary, .ant-btn-primary:hover {
     background-color: #003F6D !important;
 
@@ -14,4 +19,21 @@
     color: #334155;
     font-weight: 800;
     font-size: 24px;
+}
+
+.ant-layout-sider-dark  {
+    background-color: transparent !important;
+}
+
+.ant-layout-has-sider {
+    background-color: transparent !important;
+}
+
+.ant-layout-header {
+    background-color: transparent !important;
+    color: black !important;
+}
+
+.ant-layout {
+    background-color: transparent !important;
 }

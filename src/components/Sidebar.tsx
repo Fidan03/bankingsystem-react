@@ -10,6 +10,7 @@ import star from '../assets/star.png'
 import bookmark from '../assets/Bookmark.png'
 import logo from '../assets/azerpoct-az-hor.png'
 import styles from './Sidebar.module.scss'
+import line from '../assets/line.png'
 
 const Sidebar = () => {
   return (
@@ -17,7 +18,11 @@ const Sidebar = () => {
         <div className={styles.logoContainer}>
             <img src={logo} alt="logo" className={styles.logo}/>
         </div>
-        <br/>
+
+        <div>
+            <img src={line} alt="line" />
+        </div>
+
         <div className={styles.menuList}>
             <ul className={styles.list}>
                 <li className={styles.eachItem}>

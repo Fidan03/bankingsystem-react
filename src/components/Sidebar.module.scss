@@ -3,7 +3,7 @@
     width: 250px;
     height: 100%;
     border-radius: 16px;
-    margin: 12px;
+    padding: 12px;
     
     .menuList {
         .list {
@@ -12,6 +12,7 @@
                 align-items: center;
                 justify-content: start;
                 gap: 20px;
+                cursor: pointer;
 
                 .menuImg {
                     text-align: center;
