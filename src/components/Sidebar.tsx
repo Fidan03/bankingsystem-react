@@ -19,7 +19,7 @@ const Sidebar = () => {
             <img src={logo} alt="logo" className={styles.logo}/>
         </div>
 
-        <div>
+        <div className={styles.line}>
             <img src={line} alt="line" />
         </div>
 
@@ -30,40 +30,40 @@ const Sidebar = () => {
                     <p className={styles.menuTitle}>Ana səhifə</p>
                 </li>
                 <li className={styles.eachItem}>
-                    <img src={file} alt="file-text" />
-                    <p>Ödəniş tapşırıqları</p>
+                    <img src={file} alt="file-text" className={styles.menuImg}/>
+                    <p className={styles.menuTitle}>Ödəniş tapşırıqları</p>
                 </li>
                 <li className={styles.eachItem}>
-                    <img src={elementPlus} alt="elementPlus" />
-                    <p>Ödəniş sistemləri</p>
+                    <img src={elementPlus} alt="elementPlus" className={styles.menuImg}/>
+                    <p className={styles.menuTitle}>Ödəniş sistemləri</p>
                 </li>
                 <li className={styles.eachItem}>
-                    <img src={card} alt="card" />
-                    <p>Kartlar və hesablar</p>
+                    <img src={card} alt="card" className={styles.menuImg}/>
+                    <p className={styles.menuTitle}>Kartlar və hesablar</p>
                 </li>
                 <li className={styles.eachItem}>
-                    <img src={receipt} alt="receipt" />
-                    <p>Kreditlər</p>
+                    <img src={receipt} alt="receipt" className={styles.menuImg}/>
+                    <p className={styles.menuTitle}>Kreditlər</p>
                 </li>
                 <li className={styles.eachItem}>
-                    <img src={moneyBag} alt="moneyBag" />
-                    <p>Əmanətlər</p>
+                    <img src={moneyBag} alt="moneyBag" className={styles.menuImg}/>
+                    <p className={styles.menuTitle}>Əmanətlər</p>
                 </li>
                 <li className={styles.eachItem}>
-                    <img src={money} alt="money" />
-                    <p>Əmək haqqı layihəsi</p>
+                    <img src={money} alt="money" className={styles.menuImg}/>
+                    <p className={styles.menuTitle}>Əmək haqqı layihəsi</p>
                 </li>
                 <li className={styles.eachItem}>
-                    <img src={exchange} alt="exchange" />
-                    <p>Valyuta mübadiləsi</p>
+                    <img src={exchange} alt="exchange" className={styles.menuImg}/>
+                    <p className={styles.menuTitle}>Valyuta mübadiləsi</p>
                 </li>
                 <li className={styles.eachItem}>
-                    <img src={star} alt="star" />
-                    <p>Ani Ödəniş sistemi</p>
+                    <img src={star} alt="star" className={styles.menuImg}/>
+                    <p className={styles.menuTitle}>Ani Ödəniş sistemi</p>
                 </li>
                 <li className={styles.eachItem}>
-                    <img src={bookmark} alt="bookmark" />
-                    <p>Şablonlar</p>
+                    <img src={bookmark} alt="bookmark" className={styles.menuImg}/>
+                    <p className={styles.menuTitle}>Şablonlar</p>
                 </li>
             </ul>
         </div>

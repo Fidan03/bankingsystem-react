@@ -4,6 +4,19 @@
     height: 100%;
     border-radius: 16px;
     padding: 12px;
+
+    .logoContainer {
+        margin-top: 20px;
+        margin-bottom: 25px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .line {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
     
     .menuList {
         .list {
@@ -13,13 +26,26 @@
                 justify-content: start;
                 gap: 20px;
                 cursor: pointer;
+                color: white;
+                width: 218px;
+                margin-left: 20px;
 
                 .menuImg {
                     text-align: center;
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                    color: white;
+                    width: 20px;
+                    height: 20px;
                 }
 
                 .menuTitle {
                     text-align: center;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 20px;
                 }
             }
         }
