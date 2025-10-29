@@ -1,4 +1,25 @@
 .headerContainer {
     display: flex;
     justify-content: space-between;
+
+    .pageName {
+        
+        .title {
+            font-size: 24px;
+            font-weight: 800;
+            line-height: 36px;
+            color: #0F172A;
+        }
+    }
+
+    .icons {
+        .searchAndNotify {
+            .search, .bell {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+
+    }
 }
