@@ -8,7 +8,7 @@ const handleChange = (value: string) => {
 const Dropdown: React.FC = () => (
   <Space wrap>
     <Select
-      defaultValue="lucy"
+      defaultValue="AZE"
       style={{ width: 120 }}
       onChange={handleChange}
       options={[
