@@ -1,7 +1,7 @@
 import search from '../assets/Search (1).png'
 import bell from '../assets/notification.png'
 import styles from '../components/Header.module.scss'
-import DropdownMenu from '../components/Dropdown'
+import Dropdown from '../components/Dropdown'
 
 const HeaderLayout = () => {
   return (
@@ -21,7 +21,7 @@ const HeaderLayout = () => {
             <div className={styles.dropdown}>
 
               <div className={styles.lanuguageDrop}>
-                <DropdownMenu/>
+                <Dropdown/>
               </div>
 
               {/* <div className={styles.profileDrop}>

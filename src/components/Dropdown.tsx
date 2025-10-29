@@ -1,32 +1,23 @@
 import React from 'react';
-import { DownOutlined, SmileOutlined } from '@ant-design/icons';
-import { Dropdown, Space } from 'antd';
-const items = [
-  {
-    key: '1',
-    label: (
-      <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-        ENG
-      </a>
-    ),
-  },
-    {
-    key: '2',
-    label: (
-      <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-        RU
-      </a>
-    ),
-  },
-];
-const DropdownMenu = () => (
-  <Dropdown menu={{ items }}>
-    <a onClick={e => e.preventDefault()}>
-      <Space>
-        AZE
-        <DownOutlined />
-      </Space>
-    </a>
-  </Dropdown>
+import { Select, Space } from 'antd';
+
+const handleChange = (value: string) => {
+  console.log(`selected ${value}`);
+};
+
+const Dropdown: React.FC = () => (
+  <Space wrap>
+    <Select
+      defaultValue="lucy"
+      style={{ width: 120 }}
+      onChange={handleChange}
+      options={[
+        { value: 'AZE', label: 'AZE' },
+        { value: 'ENG', label: 'ENG' },
+        { value: 'RU', label: 'RU' },
+      ]}
+    />
+  </Space>
 );
-export default DropdownMenu;
+
+export default Dropdown;
