@@ -1,7 +1,7 @@
 import search from '../assets/Search (1).png'
 import bell from '../assets/notification.png'
 import styles from '../components/Header.module.scss'
-import downArrow from '../assets/chevron-down.png'
+import DropdownMenu from '../components/Dropdown'
 
 const HeaderLayout = () => {
   return (
@@ -20,22 +20,13 @@ const HeaderLayout = () => {
 
             <div className={styles.dropdown}>
 
-              <div className={styles.lanuguage}>
-                <ul className={styles.languageOptions}>
-                  <li>AZE</li>
-                  <li>EN</li>
-                  <li>RU</li>
-                </ul>
-                <img src={downArrow} alt="downArrow" className={styles.downArrow}/>
+              <div className={styles.lanuguageDrop}>
+                <DropdownMenu/>
               </div>
 
-              <div className={styles.profile}>
-                <ul>
-                  <li>Quluzadə Vahid Aydın oğlu</li>
-                  <li>Birinci imza hüququ</li>
-                </ul>
-                <img src={downArrow} alt="downArrow" className={styles.downArrow}/>
-              </div>
+              {/* <div className={styles.profileDrop}>
+
+              </div> */}
 
             </div>
 

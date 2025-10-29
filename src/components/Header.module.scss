@@ -13,6 +13,8 @@
     }
 
     .icons {
+        display: flex;
+
         .searchAndNotify {
             .search, .bell {
                 width: 24px;
