@@ -21,12 +21,12 @@ const HeaderLayout = () => {
             <div className={styles.dropdown}>
 
               <div className={styles.lanuguageDrop}>
-                <Dropdown/>
+                <Dropdown optionOne="AZE" optionTwo="ENG" optionThree="RU" w={100} />
               </div>
 
-              {/* <div className={styles.profileDrop}>
-
-              </div> */}
+              <div className={styles.profileDrop}>
+                <Dropdown optionOne="Profile" optionTwo="Settings" optionThree="Logout" w={150} />
+              </div>
 
             </div>
 

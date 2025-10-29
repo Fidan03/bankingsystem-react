@@ -14,12 +14,24 @@
 
     .icons {
         display: flex;
+        gap: 12px;
 
         .searchAndNotify {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            cursor: pointer;
+
             .search, .bell {
                 width: 24px;
                 height: 24px;
+                margin: 16px;
             }
+        }
+
+        .dropdown {
+            display: flex;
+            gap: 12px;
         }
 
 

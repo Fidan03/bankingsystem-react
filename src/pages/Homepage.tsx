@@ -8,8 +8,6 @@ const headerStyle = {
   color: '#fff',
   padding: '0 24px',
   lineHeight: '64px',
-  // backgroundColor: '#4096ff',
-  // position: 'fixed',
   width: '79vw',
   marginLeft: '24px',
 };
@@ -17,10 +15,7 @@ const headerStyle = {
 const contentStyle = {
   padding: '24px',
   minHeight: '100vh',
-  backgroundColor: 'darkred',
   width: '79vw',
-  position: 'relative',
-  zIndex: '-1',
   marginLeft: '24px',
 };
 
@@ -33,8 +28,6 @@ const siderStyle = {
 const contentWrapperStyle = {
   marginLeft: 250,
   height: '96vh',
-  position: 'relative',
-  zIndex: '-2'
 };
 
 const Homepage = () => (

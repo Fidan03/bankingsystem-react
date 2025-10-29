@@ -1,20 +1,19 @@
-import React from 'react';
 import { Select, Space } from 'antd';
 
-const handleChange = (value: string) => {
+const handleChange = (value) => {
   console.log(`selected ${value}`);
 };
 
-const Dropdown: React.FC = () => (
+const Dropdown = ({ optionOne = 'AZE', optionTwo = 'ENG', optionThree = 'RU', w = 120 }) => (
   <Space wrap>
     <Select
-      defaultValue="AZE"
-      style={{ width: 120 }}
+      defaultValue={optionOne}
+      style={{ width: w }}
       onChange={handleChange}
       options={[
-        { value: 'AZE', label: 'AZE' },
-        { value: 'ENG', label: 'ENG' },
-        { value: 'RU', label: 'RU' },
+        { value: optionOne, label: optionOne },
+        { value: optionTwo, label: optionTwo },
+        { value: optionThree, label: optionThree },
       ]}
     />
   </Space>
