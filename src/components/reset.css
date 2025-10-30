@@ -35,4 +35,8 @@
     height: 56px;
 }
 
+.ant-select-focused:focus {
+    border-color: none;
+}
+
 

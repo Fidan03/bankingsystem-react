@@ -1,22 +1,38 @@
-import { Select, Space } from 'antd';
+import React from 'react';
+import { Select, Space, ConfigProvider } from 'antd';
 
 const handleChange = (value) => {
   console.log(`selected ${value}`);
 };
 
-const Dropdown = ({ optionOne = 'AZE', optionTwo = 'ENG', optionThree = 'RU', w = 120 }) => (
-  <Space wrap>
-    <Select
-      defaultValue={optionOne}
-      style={{ width: w }}
-      onChange={handleChange}
-      options={[
-        { value: optionOne, label: optionOne },
-        { value: optionTwo, label: optionTwo },
-        { value: optionThree, label: optionThree },
-      ]}
-    />
-  </Space>
+const Dropdown = ({
+  optionOne = 'AZE',
+  optionTwo = 'ENG',
+  optionThree = 'RU',
+  w = 120,
+}) => (
+  <ConfigProvider
+    theme={{
+      components: {
+        Select: {
+          activeBorderColor: 'grey',
+        },
+      },
+    }}
+  >
+    <Space wrap>
+      <Select
+        defaultValue={optionOne}
+        style={{ width: w }}
+        onChange={handleChange}
+        options={[
+          { value: optionOne, label: optionOne },
+          { value: optionTwo, label: optionTwo },
+          { value: optionThree, label: optionThree },
+        ]}
+      />
+    </Space>
+  </ConfigProvider>
 );
 
 export default Dropdown;
