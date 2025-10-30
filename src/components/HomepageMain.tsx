@@ -32,51 +32,56 @@ const HomepageMain: React.FC = () => (
 
         <div className={styles.inputFields}>
             <Space wrap>
-                <Select
-                defaultValue="lucy"
-                style={{ width: 120 }}
-                onChange={handleChange}
-                options={[
-                    { value: 'jack', label: 'Jack' },
-                    { value: 'lucy', label: 'Lucy' },
-                    { value: 'Yiminghe', label: 'yiminghe' },
-                    { value: 'disabled', label: 'Disabled', disabled: true },
-                ]}
-                />
+                <div className={styles.dropdowns}>
                     <Select
-                defaultValue="lucy"
-                style={{ width: 120 }}
-                onChange={handleChange}
-                options={[
-                    { value: 'jack', label: 'Jack' },
-                    { value: 'lucy', label: 'Lucy' },
-                    { value: 'Yiminghe', label: 'yiminghe' },
-                    { value: 'disabled', label: 'Disabled', disabled: true },
-                ]}
-                />
+                        defaultValue="lucy"
+                        style={{ width: 455 }}
+                        onChange={handleChange}
+                        options={[
+                            { value: 'jack', label: 'Jack' },
+                            { value: 'lucy', label: 'Lucy' },
+                            { value: 'Yiminghe', label: 'yiminghe' },
+                            { value: 'disabled', label: 'Disabled', disabled: true },
+                        ]}
+                    />
+
                     <Select
-                defaultValue="lucy"
-                style={{ width: 120 }}
-                onChange={handleChange}
-                options={[
-                    { value: 'jack', label: 'Jack' },
-                    { value: 'lucy', label: 'Lucy' },
-                    { value: 'Yiminghe', label: 'yiminghe' },
-                    { value: 'disabled', label: 'Disabled', disabled: true },
-                ]}
-                />
+                        defaultValue="lucy"
+                        style={{ width: 455 }}
+                        onChange={handleChange}
+                        options={[
+                            { value: 'jack', label: 'Jack' },
+                            { value: 'lucy', label: 'Lucy' },
+                            { value: 'Yiminghe', label: 'yiminghe' },
+                            { value: 'disabled', label: 'Disabled', disabled: true },
+                        ]}
+                    />
+
+                    <Select
+                        defaultValue="lucy"
+                        style={{ width: 455 }}
+                        onChange={handleChange}
+                        options={[
+                            { value: 'jack', label: 'Jack' },
+                            { value: 'lucy', label: 'Lucy' },
+                            { value: 'Yiminghe', label: 'yiminghe' },
+                            { value: 'disabled', label: 'Disabled', disabled: true },
+                        ]}
+                    />
+                </div>
+                
             </Space>
 
-            <Input placeholder="Basic usage" />
-            <Input placeholder="Basic usage" />
-        </div>
+            <Input placeholder="Basic usage" style={{ width: 455, height: 56}}/>
+            <Input placeholder="Basic usage" style={{ width: 455, height: 56}}/>
 
-        <div>
-            <Flex gap="small" wrap>
-                <Button type="primary">Primary Button</Button>
+            <div>
+                <Flex gap="small" wrap>
+                    <Button type="primary" style={{ width: 221.5, height: 56, backgroundColor: '#FFD400'}}>Primary Button</Button>
 
-                <Button type="primary">Primary Button</Button>
-            </Flex>
+                    <Button type="primary" style={{ width: 221.5, height: 56}}>Primary Button</Button>
+                </Flex>
+            </div>
         </div>
 
         <div>
