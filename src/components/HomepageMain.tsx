@@ -30,7 +30,7 @@ const HomepageMain: React.FC = () => (
 
     <div className={styles.homepageMainContainer}>
 
-        <div className={styles.input}>
+        <div className={styles.inputFields}>
             <Space wrap>
                 <Select
                 defaultValue="lucy"

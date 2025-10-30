@@ -1,7 +1,10 @@
 .homepageMainContainer {
     display: flex;
 
-    .input {
+    .inputFields {
         width: 455px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
     }
 }
