@@ -1,7 +1,7 @@
 import React from 'react';
 import { Select, Space, ConfigProvider } from 'antd';
 
-const handleChange = (value) => {
+const handleChange = (value : string) => {
   console.log(`selected ${value}`);
 };
 
