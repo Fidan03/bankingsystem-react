@@ -1,8 +1,11 @@
 import React from 'react';
-import { Select, Space, Input, Button, Flex, message, Upload } from 'antd';
-import { UploadOutlined } from '@ant-design/icons';
+import { Select, Space, Input, Button, Flex, message, Upload, ConfigProvider } from 'antd';
+// import { UploadOutlined } from '@ant-design/icons';
 import type { UploadProps } from 'antd';
-import styles from './HomepageMain.module.scss'
+import { useResponsive } from 'antd-style';
+import styles from './HomepageMain.module.scss';
+import fileBookmark from '../assets/u_file-bookmark-alt 1.png'
+import bookmark from '../assets/fi_bookmark.png'
 
 const handleChange = (value: string) => {
   console.log(`selected ${value}`);
@@ -26,89 +29,101 @@ const props: UploadProps = {
   },
 };
 
-const HomepageMain: React.FC = () => (
+const HomepageMain: React.FC = () => {
+  const { xxl } = useResponsive();
 
+  return (
     <div className={styles.homepageMainContainer}>
+      <div className={styles.inputFields}>
+        <Space wrap>
+          <div className={styles.dropdowns}>
+                <Select
+                    defaultValue="Məxaric hesabı"
+                    style={{ width: 455 }}
+                    onChange={handleChange}
+                    options={[
+                    { value: 'Məxaric hesabı', label: 'Məxaric hesabı' },
+                    { value: 'lucy', label: 'Lucy' },
+                    { value: 'Yiminghe', label: 'Yiminghe' },
+                    { value: 'disabled', label: 'Disabled', disabled: true },
+                    ]}
+                />
 
-        <div className={styles.inputFields}>
-            <Space wrap>
-                <div className={styles.dropdowns}>
-                    <Select
-                        defaultValue="lucy"
-                        style={{ width: 455 }}
-                        onChange={handleChange}
-                        options={[
-                            { value: 'jack', label: 'Jack' },
-                            { value: 'lucy', label: 'Lucy' },
-                            { value: 'Yiminghe', label: 'yiminghe' },
-                            { value: 'disabled', label: 'Disabled', disabled: true },
-                        ]}
-                    />
+                <Select
+                    defaultValue="Alan hesabın nömrəsi"
+                    style={{ width: 455 }}
+                    onChange={handleChange}
+                    options={[
+                    { value: 'Alan hesabın nömrəsi', label: 'Alan hesabın nömrəsi' },
+                    { value: 'lucy', label: 'Lucy' },
+                    { value: 'Yiminghe', label: 'Yiminghe' },
+                    { value: 'disabled', label: 'Disabled', disabled: true },
+                    ]}
+                />
 
-                    <Select
-                        defaultValue="lucy"
-                        style={{ width: 455 }}
-                        onChange={handleChange}
-                        options={[
-                            { value: 'jack', label: 'Jack' },
-                            { value: 'lucy', label: 'Lucy' },
-                            { value: 'Yiminghe', label: 'yiminghe' },
-                            { value: 'disabled', label: 'Disabled', disabled: true },
-                        ]}
-                    />
+                <Select
+                    defaultValue="Komissiyanın məxaric hesabı"
+                    style={{ width: 455 }}
+                    onChange={handleChange}
+                    options={[
+                    { value: 'Komissiyanın məxaric hesabı', label: 'Komissiyanın məxaric hesabı' },
+                    { value: 'lucy', label: 'Lucy' },
+                    { value: 'Yiminghe', label: 'Yiminghe' },
+                    { value: 'disabled', label: 'Disabled', disabled: true },
+                    ]}
+                />
+          </div>
+        </Space>
 
-                    <Select
-                        defaultValue="lucy"
-                        style={{ width: 455 }}
-                        onChange={handleChange}
-                        options={[
-                            { value: 'jack', label: 'Jack' },
-                            { value: 'lucy', label: 'Lucy' },
-                            { value: 'Yiminghe', label: 'yiminghe' },
-                            { value: 'disabled', label: 'Disabled', disabled: true },
-                        ]}
-                    />
-                </div>
-                
-            </Space>
+        <Input placeholder="Məbləğ" style={{ width: 455, height: 56 }} />
+        <Input placeholder="Ödənişin təyinatı" style={{ width: 455, height: 56 }} />
 
-            <Input placeholder="Basic usage" style={{ width: 455, height: 56}}/>
-            <Input placeholder="Basic usage" style={{ width: 455, height: 56}}/>
+        <div className={styles.buttons}>
 
+          <ConfigProvider componentSize={xxl ? 'middle' : 'small'}>
+            <Flex vertical gap="small">
+              <Flex gap="small" wrap>
+                <Button style={{ backgroundColor: '#FFD400', color: 'black', width: 221.5, height: 56, borderRadius: 8 }}>İmzaya göndər</Button>
+              </Flex>
+            </Flex>
+          </ConfigProvider>
+
+          <Flex gap="small" wrap>
+            <Button type="primary" style={{ width: 221.5, height: 56, borderRadius: 8 }}>
+              İmzala
+            </Button>
+          </Flex>
+
+        </div>
+      </div>
+
+      <div className={styles.fileUploadSection}>
+
+        <div className={styles.button}>
+          <Upload {...props}>
+            <Button>Şablonlardan seç</Button>
+            <img src={fileBookmark} alt="fileBookmark" className={styles.buttonIcon}/>
+          </Upload>
+        </div>
+        
+        <div className={styles.commisionCalc}>
             <div>
-                <Flex gap="small" wrap>
-                    <Button type="primary" style={{ width: 221.5, height: 56, backgroundColor: '#FFD400'}}>Primary Button</Button>
-
-                    <Button type="primary" style={{ width: 221.5, height: 56}}>Primary Button</Button>
-                </Flex>
+                <p className={styles.title}>Köçürülən məbləğ</p>
+                <p className={styles.amount}>5.20 AZN</p>
             </div>
+          <p>Kommisiya: 0.00 AZN</p>
         </div>
 
-        <div>
-            <div>
-                <Upload {...props}>
-                    <Button icon={<UploadOutlined />}>Click to Upload</Button>
-                </Upload>
-            </div>
-
-            <div>
-                <div>
-                    <p>Köçürülən məbləğ</p>
-                    <p>5.20 AZN</p>
-                </div>
-
-                <p>Kommisiya: 0.00 AZN</p>
-            </div>
-
-            <div>
-                <Upload {...props}>
-                    <Button icon={<UploadOutlined />}>Click to Upload</Button>
-                </Upload>
-            </div>
+        <div className={styles.button}>
+          <Upload {...props}>
+            <Button>Bu köçürməni şablon et</Button>
+            <img src={bookmark} alt="bookmark" className={styles.buttonIcon}/>
+          </Upload>
         </div>
 
+      </div>
     </div>
-  
-);
+  );
+};
 
 export default HomepageMain;
