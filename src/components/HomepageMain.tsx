@@ -1,6 +1,5 @@
 import React from 'react';
 import { Select, Space, Input, Button, Flex, message, Upload, ConfigProvider } from 'antd';
-// import { UploadOutlined } from '@ant-design/icons';
 import type { UploadProps } from 'antd';
 import { useResponsive } from 'antd-style';
 import styles from './HomepageMain.module.scss';
@@ -45,7 +44,6 @@ const HomepageMain: React.FC = () => {
                     { value: 'Məxaric hesabı', label: 'Məxaric hesabı' },
                     { value: 'lucy', label: 'Lucy' },
                     { value: 'Yiminghe', label: 'Yiminghe' },
-                    { value: 'disabled', label: 'Disabled', disabled: true },
                     ]}
                 />
 
@@ -57,7 +55,6 @@ const HomepageMain: React.FC = () => {
                     { value: 'Alan hesabın nömrəsi', label: 'Alan hesabın nömrəsi' },
                     { value: 'lucy', label: 'Lucy' },
                     { value: 'Yiminghe', label: 'Yiminghe' },
-                    { value: 'disabled', label: 'Disabled', disabled: true },
                     ]}
                 />
 
@@ -69,7 +66,6 @@ const HomepageMain: React.FC = () => {
                     { value: 'Komissiyanın məxaric hesabı', label: 'Komissiyanın məxaric hesabı' },
                     { value: 'lucy', label: 'Lucy' },
                     { value: 'Yiminghe', label: 'Yiminghe' },
-                    { value: 'disabled', label: 'Disabled', disabled: true },
                     ]}
                 />
           </div>
