@@ -35,9 +35,9 @@ const HomepageMain: React.FC = () => {
 	const { xxl } = useResponsive();
 
 	const dispatch = useDispatch();
-	const amount = useSelector((s: RootState) => s.counter.amount);
-	const commission = amount * 0.02;
-	const totalWithCommission = amount * 1.02;
+	const amount = useSelector((state: RootState) => state.counter.amount);   //read's data from redux store
+	const commission = amount * 0.02;  //calculation of commission
+	const totalWithCommission = amount * 0.98;   //calculation of total
 
 	return (
 		<div className={styles.homepageMainContainer}>
@@ -84,8 +84,8 @@ const HomepageMain: React.FC = () => {
 					style={{ width: 455, height: 56 }}
 					value={amount || ''}
 					onChange={(e) => {
-						const v = Number(e.target.value);
-						dispatch(setAmount(Number.isFinite(v) ? v : 0));
+						const value = Number(e.target.value);   //taking value from the input field
+						dispatch(setAmount(Number.isFinite(value) ? value : 0));  //checks if the value is real or not, so if its real it will use 'value', if not will use 0
 					}}
 				/>
 
@@ -121,7 +121,7 @@ const HomepageMain: React.FC = () => {
 						<p className={styles.title}>Köçürülən məbləğ</p>
 						<p className={styles.amount}>{totalWithCommission.toFixed(2)}</p>
 					</div>
-					<p>Kommisiya (2%): {commission.toFixed(2)} AZN</p>
+					<p>Kommisiya: {commission.toFixed(2)} AZN</p>
 				</div>
 
 				<div className={styles.button}>
