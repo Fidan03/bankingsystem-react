@@ -8,17 +8,6 @@
         flex-direction: column;
         gap: 16px;
 
-        .dropdowns{
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .buttons {
-            display: flex;
-            width: 455px;
-            justify-content: space-between;
-        }
     }
 
     .fileUploadSection {
@@ -27,29 +16,11 @@
         flex-direction: column;
         gap: 20px;
 
-        .button {
-            border: 1px solid #334155;
-            width: 359px;
-            height: 56px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 8px;
-            cursor: pointer;
-            
-
-            .buttonIcon {
-                width: 25px;
-
-            }
-        }
-
         .commisionCalc {
             border: 1px solid #CDD5DF;
             padding: 24px;
             border-radius: 8px;
             background-color: #FAFAFA;
-            // margin-bottom: 16px;
 
             div {
                 border: 1px solid #BFCDFF;

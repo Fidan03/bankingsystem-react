@@ -59,7 +59,7 @@ const HomepageMain: React.FC = () => {
 						/>
 
 						<Select
-							defaultValue="Alan hesabın nömrəsi"
+							defaultValue="Məxaric hesabı"
 							style={{ width: 455 }}
 							onChange={handleChange}
 							options={[
