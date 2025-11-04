@@ -1,7 +1,7 @@
 import { Layout } from 'antd';
 import Sidebar from '../components/Sidebar';
 import HeaderLayout from '../components/Header';
-import HomepageMain from '../components/HomepageMain';
+import SignMain from '../components/SignMain';
 
 const { Header, Sider, Content } = Layout;
 
@@ -42,7 +42,7 @@ const Homepage = () => (
         <HeaderLayout />
       </Header>
       <Content style={contentStyle}>
-        <HomepageMain/>
+        <SignMain/>
       </Content>
     </Layout>
   </Layout>

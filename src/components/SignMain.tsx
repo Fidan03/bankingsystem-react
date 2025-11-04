@@ -2,7 +2,7 @@ import React from 'react';
 import { Select, Space, Input, Button, Flex, message, Upload, ConfigProvider } from 'antd';
 import type { UploadProps } from 'antd';
 import { useResponsive } from 'antd-style';
-// import styles from './HomepageMain.module.scss';
+import styles from './SignMain.module.scss';
 import fileBookmark from '../assets/u_file-bookmark-alt 1.png'
 import bookmark from '../assets/fi_bookmark.png'
 import { useDispatch, useSelector } from 'react-redux';

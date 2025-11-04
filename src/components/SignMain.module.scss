@@ -1,0 +1,84 @@
+.homepageMainContainer {
+    display: flex;
+    justify-content: space-between;
+
+    .inputFields {
+        width: 455px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .dropdowns{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .buttons {
+            display: flex;
+            width: 455px;
+            justify-content: space-between;
+        }
+    }
+
+    .fileUploadSection {
+        width: 359px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .button {
+            border: 1px solid #334155;
+            width: 359px;
+            height: 56px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            cursor: pointer;
+            
+
+            .buttonIcon {
+                width: 25px;
+
+            }
+        }
+
+        .commisionCalc {
+            border: 1px solid #CDD5DF;
+            padding: 24px;
+            border-radius: 8px;
+            background-color: #FAFAFA;
+            // margin-bottom: 16px;
+
+            div {
+                border: 1px solid #BFCDFF;
+                background-color: #BFCDFF;
+                border-radius: 8px;
+                padding: 24px;
+                height: 108px;
+                margin-bottom: 16px;
+
+                .title {
+                    font-weight: 400;
+                    font-size: 18px;
+                    color: #0F172A;
+                    line-height: 24px;
+                }
+
+                .amount {
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                color: #334155;
+                font-weight: 400;
+                line-height: 22px;
+            }
+        }
+    }
+}
