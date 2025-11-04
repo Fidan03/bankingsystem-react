@@ -4,6 +4,7 @@ import { counterSlice } from './count'
 export const store = configureStore({
   reducer: {
     counter: counterSlice.reducer,
+    account: counterSlice.reducer,
   },
 })
 
