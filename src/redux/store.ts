@@ -4,9 +4,6 @@ import { counterSlice } from './count'
 export const store = configureStore({
   reducer: {
     counter: counterSlice.reducer,
-    firstAccount: counterSlice.reducer,
-    secondAccount: counterSlice.reducer,
-    thirdAccount: counterSlice.reducer,
   },
 })
 

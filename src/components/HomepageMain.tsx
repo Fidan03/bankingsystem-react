@@ -9,7 +9,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setAmount, setFirstAccount, setSecondAccount, setThirdAccount} from '../redux/count';
 import type { RootState } from '../redux/store';
 import { useNavigate } from 'react-router-dom';
-import { RxValue } from 'react-icons/rx';
 
 
 const props: UploadProps = {
@@ -49,7 +48,7 @@ const HomepageMain: React.FC = () => {
 						<Select
 							defaultValue="Məxaric hesabı"
 							style={{ width: 455 }}
-							onChange={(value: string) => {dispatch(setFirstAccount(value))}}
+							onChange={(value) => dispatch(setFirstAccount(value))}
 							options={[
 								{ value: 'Məxaric hesabı', label: 'Məxaric hesabı' },
 								{ value: 'lucy', label: 'Lucy' },
@@ -60,7 +59,7 @@ const HomepageMain: React.FC = () => {
 						<Select
 							defaultValue="Məxaric hesabı"
 							style={{ width: 455 }}
-							onChange={(value: string) => {dispatch(setSecondAccount(value))}}
+							onChange={(value) => dispatch(setSecondAccount(value))}
 							options={[
 								{ value: 'Alan hesabın nömrəsi', label: 'Alan hesabın nömrəsi' },
 								{ value: 'lucy', label: 'Lucy' },
@@ -71,7 +70,7 @@ const HomepageMain: React.FC = () => {
 						<Select
 							defaultValue="Komissiyanın məxaric hesabı"
 							style={{ width: 455 }}
-							onChange={(value: string) => {dispatch(setThirdAccount(value))}}
+							onChange={(value) => dispatch(setThirdAccount(value))}
 							options={[
 								{ value: 'Komissiyanın məxaric hesabı', label: 'Komissiyanın məxaric hesabı' },
 								{ value: 'lucy', label: 'Lucy' },
