@@ -24,5 +24,5 @@ export const counterSlice = createSlice({
   },
 })
 
-export const { setAmount } = counterSlice.actions
+export const { setAmount, setAccount } = counterSlice.actions
 export default counterSlice.reducer

@@ -9,10 +9,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setAmount } from '../redux/count';
 import type { RootState } from '../redux/store';
 import { useNavigate } from 'react-router-dom';
+import { RxValue } from 'react-icons/rx';
 
-const handleChange = (value: string) => {
-	console.log(`selected ${value}`);
-};
 
 const props: UploadProps = {
 	name: 'file',
@@ -40,6 +38,11 @@ const HomepageMain: React.FC = () => {
 	const commission = amount * 0.02;  //calculation of commission
 	const totalWithCommission = amount * 0.98;   //calculation of total
 
+	const handleAccountSelect = (value: string) => {
+  		dispatch(setAccount(value)); // update redux
+	};
+
+
 	const navigate = useNavigate();
 
 	return (
@@ -50,7 +53,7 @@ const HomepageMain: React.FC = () => {
 						<Select
 							defaultValue="Məxaric hesabı"
 							style={{ width: 455 }}
-							onChange={handleChange}
+							onChange={handleAccountSelect}
 							options={[
 								{ value: 'Məxaric hesabı', label: 'Məxaric hesabı' },
 								{ value: 'lucy', label: 'Lucy' },
@@ -61,7 +64,7 @@ const HomepageMain: React.FC = () => {
 						<Select
 							defaultValue="Məxaric hesabı"
 							style={{ width: 455 }}
-							onChange={handleChange}
+							// onChange={handleChange}
 							options={[
 								{ value: 'Alan hesabın nömrəsi', label: 'Alan hesabın nömrəsi' },
 								{ value: 'lucy', label: 'Lucy' },
@@ -72,7 +75,7 @@ const HomepageMain: React.FC = () => {
 						<Select
 							defaultValue="Komissiyanın məxaric hesabı"
 							style={{ width: 455 }}
-							onChange={handleChange}
+							// onChange={handleChange}
 							options={[
 								{ value: 'Komissiyanın məxaric hesabı', label: 'Komissiyanın məxaric hesabı' },
 								{ value: 'lucy', label: 'Lucy' },
