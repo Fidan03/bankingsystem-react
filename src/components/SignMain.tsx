@@ -31,7 +31,7 @@ const props: UploadProps = {
 	},
 };
 
-const HomepageMain: React.FC = () => {
+const SignMain: React.FC = () => {
 	const { xxl } = useResponsive();
 
 	const dispatch = useDispatch();
@@ -135,4 +135,4 @@ const HomepageMain: React.FC = () => {
 	);
 };
 
-export default HomepageMain;
+export default SignMain;
