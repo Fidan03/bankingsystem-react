@@ -39,6 +39,7 @@ const SignMain: React.FC = () => {
 	const commission = amount * 0.02;  //calculation of commission
 	const totalWithCommission = amount * 0.98;   //calculation of total
 
+
 	return (
 		<div className={styles.homepageMainContainer}>
 			<div className={styles.inputFields}>
@@ -91,7 +92,7 @@ const SignMain: React.FC = () => {
 
 				<Input placeholder="Ödənişin təyinatı" style={{ width: 455, height: 56 }} />
 
-				<div className={styles.buttons}>
+				{/* <div className={styles.buttons}>
 					<ConfigProvider componentSize={xxl ? 'middle' : 'small'}>
 						<Flex vertical gap="small">
 							<Flex gap="small" wrap>
@@ -105,7 +106,7 @@ const SignMain: React.FC = () => {
 							İmzala
 						</Button>
 					</Flex>
-				</div>
+				</div> */}
 			</div>
 
 			<div className={styles.fileUploadSection}>

@@ -8,6 +8,7 @@ import bookmark from '../assets/fi_bookmark.png'
 import { useDispatch, useSelector } from 'react-redux';
 import { setAmount } from '../redux/count';
 import type { RootState } from '../redux/store';
+import { useNavigate } from 'react-router-dom';
 
 const handleChange = (value: string) => {
 	console.log(`selected ${value}`);
@@ -38,6 +39,8 @@ const HomepageMain: React.FC = () => {
 	const amount = useSelector((state: RootState) => state.counter.amount);   //read's data from redux store
 	const commission = amount * 0.02;  //calculation of commission
 	const totalWithCommission = amount * 0.98;   //calculation of total
+
+	const navigate = useNavigate();
 
 	return (
 		<div className={styles.homepageMainContainer}>
@@ -95,7 +98,9 @@ const HomepageMain: React.FC = () => {
 					<ConfigProvider componentSize={xxl ? 'middle' : 'small'}>
 						<Flex vertical gap="small">
 							<Flex gap="small" wrap>
-								<Button style={{ backgroundColor: '#FFD400', color: 'black', width: 221.5, height: 56, borderRadius: 8 }}>İmzaya göndər</Button>
+								<Button style={{ backgroundColor: '#FFD400', color: 'black', width: 221.5, height: 56, borderRadius: 8 }}
+								onClick={() => navigate('/sign')}
+								>İmzaya göndər</Button>
 							</Flex>
 						</Flex>
 					</ConfigProvider>
