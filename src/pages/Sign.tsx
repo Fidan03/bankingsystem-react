@@ -33,18 +33,23 @@ const contentWrapperStyle = {
 
 const Sign = () => (
   <Layout style={{margin: '12px'}}>
+
     <Sider width={200} style={siderStyle}>
       <Sidebar />
     </Sider>
 
     <Layout style={contentWrapperStyle}>
+        
       <Header style={headerStyle}>
         <HeaderLayout />
       </Header>
+
       <Content style={contentStyle}>
         <SignMain/>
       </Content>
+
     </Layout>
+
   </Layout>
 );
 
