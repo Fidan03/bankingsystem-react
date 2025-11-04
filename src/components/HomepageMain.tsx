@@ -6,7 +6,7 @@ import styles from './HomepageMain.module.scss';
 import fileBookmark from '../assets/u_file-bookmark-alt 1.png'
 import bookmark from '../assets/fi_bookmark.png'
 import { useDispatch, useSelector } from 'react-redux';
-import { setAmount } from '../redux/count';
+import { setAmount, setFirstAccount, setSecondAccount, setThirdAccount} from '../redux/count';
 import type { RootState } from '../redux/store';
 import { useNavigate } from 'react-router-dom';
 import { RxValue } from 'react-icons/rx';
@@ -38,10 +38,6 @@ const HomepageMain: React.FC = () => {
 	const commission = amount * 0.02;  //calculation of commission
 	const totalWithCommission = amount * 0.98;   //calculation of total
 
-	const handleAccountSelect = (value: string) => {
-  		dispatch(setAccount(value)); // update redux
-	};
-
 
 	const navigate = useNavigate();
 
@@ -53,7 +49,7 @@ const HomepageMain: React.FC = () => {
 						<Select
 							defaultValue="Məxaric hesabı"
 							style={{ width: 455 }}
-							onChange={handleAccountSelect}
+							onChange={(value: string) => {dispatch(setFirstAccount(value))}}
 							options={[
 								{ value: 'Məxaric hesabı', label: 'Məxaric hesabı' },
 								{ value: 'lucy', label: 'Lucy' },
@@ -64,7 +60,7 @@ const HomepageMain: React.FC = () => {
 						<Select
 							defaultValue="Məxaric hesabı"
 							style={{ width: 455 }}
-							// onChange={handleChange}
+							onChange={(value: string) => {dispatch(setSecondAccount(value))}}
 							options={[
 								{ value: 'Alan hesabın nömrəsi', label: 'Alan hesabın nömrəsi' },
 								{ value: 'lucy', label: 'Lucy' },
@@ -75,7 +71,7 @@ const HomepageMain: React.FC = () => {
 						<Select
 							defaultValue="Komissiyanın məxaric hesabı"
 							style={{ width: 455 }}
-							// onChange={handleChange}
+							onChange={(value: string) => {dispatch(setThirdAccount(value))}}
 							options={[
 								{ value: 'Komissiyanın məxaric hesabı', label: 'Komissiyanın məxaric hesabı' },
 								{ value: 'lucy', label: 'Lucy' },

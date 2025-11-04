@@ -3,12 +3,16 @@ import type { PayloadAction } from '@reduxjs/toolkit'
 
 export interface CounterState {
   amount: number,
-  account: string,
+  firstAccount: string,
+  secondAccount: string,
+  thirdAccount: string,
 }
 
 const initialState: CounterState = {
   amount: 0,
-  account: 'nothing',
+  firstAccount: 'nothing',
+  secondAccount: 'nothing',
+  thirdAccount: 'nothing',
 }
 
 export const counterSlice = createSlice({
@@ -18,11 +22,17 @@ export const counterSlice = createSlice({
     setAmount: (state, action: PayloadAction<number>) => {
       state.amount = action.payload
     },
-    setAccount: (state, action: PayloadAction<string>) => {
-      state.account = action.payload
+    setFirstAccount: (state, action: PayloadAction<string>) => {
+      state.firstAccount = action.payload
+    },
+    setSecondAccount: (state, action: PayloadAction<string>) => {
+      state.secondAccount = action.payload
+    },
+    setThirdAccount: (state, action: PayloadAction<string>) => {
+      state.thirdAccount = action.payload
     },
   },
 })
 
-export const { setAmount, setAccount } = counterSlice.actions
+export const { setAmount, setFirstAccount, setSecondAccount, setThirdAccount } = counterSlice.actions
 export default counterSlice.reducer

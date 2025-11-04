@@ -13,8 +13,8 @@ const SignMain: React.FC = () => {
 		<div className={styles.homepageMainContainer}>
 			<div className={styles.inputFields}>
 				<p>{account}</p>
-                <p></p>
-                <p></p>
+                <p>{account}</p>
+                <p>{account}</p>
 			</div>
 
 			<div className={styles.fileUploadSection}>
