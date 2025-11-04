@@ -31,7 +31,7 @@ const contentWrapperStyle = {
   height: '96vh',
 };
 
-const Homepage = () => (
+const Sign = () => (
   <Layout style={{margin: '12px'}}>
     <Sider width={200} style={siderStyle}>
       <Sidebar />
@@ -48,4 +48,4 @@ const Homepage = () => (
   </Layout>
 );
 
-export default Homepage;
+export default Sign;
